@@ -2,13 +2,7 @@
 
 A command-line IP geolocation and ISP lookup tool with a hacker-style terminal UI. Supports single lookups, batch lookups from a file, JSON/CSV export, and scriptable (piped) output.
 
-```
- ___ ____    _     ___   ___  _  ___   _ ____
-|_ _|  _ \  | |   / _ \ / _ \| |/ / | | |  _ \
- | || |_) | | |  | | | | | | | ' /| | | | |_) |
- | ||  __/  | |__| |_| | |_| | . \| |_| |  __/
-|___|_|     |_____\___/ \___/|_|\_\\___/|_|
-```
+<img width="2048" height="768" alt="image" src="https://github.com/user-attachments/assets/62a92d88-850f-494a-8cb7-0462f2aa9c09" />
 
 ## Features
 
