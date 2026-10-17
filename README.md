@@ -1,6 +1,7 @@
 # IP Lookup
 
-<img width="661" height="470" alt="image" src="https://github.com/user-attachments/assets/d712835d-c0c7-4d71-9ea9-226d37e414ec" />
+<img width="2048" height="768" alt="32c0df16-4297-4ce7-8ea4-5131dce0954b" src="https://github.com/user-attachments/assets/598d9a60-ed0e-44a2-8803-b23beabc2f1e" />
+
 
 A hacker-style command-line tool that looks up an IP address and shows its country, city and ISP, wrapped in a green terminal UI with an ASCII banner, typing effects and progress bars.
 
