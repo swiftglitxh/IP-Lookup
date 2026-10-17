@@ -4,7 +4,7 @@
 # ╔══════════════════════════════════════════════════════════════╗
 # ║  Project     : IP / Domain Lookup Tool                       ║
 # ║  Author      : SwiftGlitxh                                   ║
-# ║  Version     : 1.2.0                                         ║
+# ║  Version     : 1.2.1                                         ║
 # ║  Description : Takes one or more IP addresses and returns    ║
 # ║                geolocation and ISP info in a hacker-style    ║
 # ║                terminal UI. Supports batch, JSON and CSV.    ║
@@ -53,7 +53,10 @@ BOLD = "\033[1m"
 RESET = "\033[0m"
 
 API_URL = "https://wimi-api.whatismyip.com/ip-address-lookup/"
-PRIORITY_FIELDS = ["ip", "country", "city", "isp"]
+PRIORITY_FIELDS = [
+    "ip", "country", "region", "city", "zip",
+    "timezone", "isp", "org", "as", "lat", "lon",
+]
 
 BANNER = r"""
  ___ ____    _     ___   ___  _  ___   _ ____
@@ -243,8 +246,15 @@ def show_result(data):
     rows = [
         ("IP ADDRESS", data.get("ip")),
         ("COUNTRY", data.get("country")),
+        ("REGION", data.get("region")),
         ("CITY", data.get("city")),
+        ("ZIP CODE", data.get("zip")),
+        ("TIMEZONE", data.get("timezone")),
         ("ISP", data.get("isp")),
+        ("ORGANIZATION", data.get("org")),
+        ("ASN", data.get("as")),
+        ("LATITUDE", data.get("lat")),
+        ("LONGITUDE", data.get("lon")),
     ]
 
     if VERBOSE:
@@ -267,7 +277,6 @@ def show_result(data):
     for line in lines:
         print(f"║{line:<{width}}║")
     print(f"╚{'═' * width}╝{RESET}\n")
-
 
 def save_output(path, results):
     """Format is picked from the extension: .json, .csv, anything else = text."""
